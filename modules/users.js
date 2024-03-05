@@ -60,27 +60,11 @@ class Users {
         return arUsersExt;
     }
     deleteUser(obUserDelete){
-        //let intDeleteIndex=-1;
         console.log("will delete user:",obUserDelete);
         this.Items=this.Items.filter((obUser)=>{
             return !(obUser.HOST==obUserDelete.HOST&&obUser.ID==obUserDelete.ID)
         });
 
-        /*this.Items.forEach((obUser,intIndex)=>{
-            if(obUser.HOST==obUserDelete.HOST&&obUser.ID==obUserDelete.ID){
-                //obUser.res=null;
-
-                intDeleteIndex=intIndex;
-                //obUser=null;
-                //
-            }
-        });
-        if(intDeleteIndex>-1){
-            //this.Items[intDeleteIndex]=null;
-            console.log("slice user with index:",intDeleteIndex);
-        }*/
-        //console.log("will delete user:",obUserDelete.ID);
-        //obUserDelete=null;
         console.log("Users after delete:",this.Items)
     }
     getUser(obUserSearch){
